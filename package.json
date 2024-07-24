@@ -1,0 +1,27 @@
+{
+  "name": "hyperclip",
+  "main": "index.html",
+  "type": "module",
+  "pear": {
+    "name": "hyperclip",
+    "type": "desktop",
+    "gui": {
+      "backgroundColor": "d0f16",
+      "height": 540,
+      "width": 720
+    }
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "brittle": "^3.0.0"
+  },
+  "scripts": {
+    "dev": "pear dev",
+    "test": "brittle test/*.test.js"
+  },
+  "dependencies": {
+    "b4a": "^1.6.6",
+    "hypercore": "^10.37.11",
+    "hyperswarm": "^4.8.0"
+  }
+}
