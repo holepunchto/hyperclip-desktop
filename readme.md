@@ -5,7 +5,9 @@ Pear desktop application for Hyperclip. This app will push text from your clipbo
 To get started, clone this repository and:
 
     npm i -g pear
-Then run:
+
+Then install all dependencies
+    Then run:
 
     pear dev
 
