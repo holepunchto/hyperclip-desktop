@@ -8,10 +8,11 @@
 
             body {
                 --title-bar-height: 42px;
-                color: black;
+                color: rgb(255, 255, 255);
+                background-color: #001601;
+                font-family: monospace;
+                margin: 0;
                 padding-top: var(--title-bar-height);
-                background-color: white;
-
                 height: 100vh;
                 display: flex;
                 align-items: center;
@@ -45,17 +46,21 @@
                 font-size: -webkit-xxx-large;
                 font-family: fantasy;
                 text-align: center;
+                color: #fff;
             }
 
             button {
-                font-weight: 600;
-                border-radius: 40px;
-                padding: 10px 20px;
+                all: unset;
+                border: 1px ridge #B0D944;
+                background: #000;
+                color: #B0D944;
+                padding: .45rem;
+                font-family: monospace;
+                font-size: 1rem;
+                line-height: 1rem;
                 transition: 0.3s;
-                background-color: #0d83ff;
-                color: white;
-                border: none;
             }
+
 
             button:hover {
                 scale: 1.02;
@@ -71,7 +76,7 @@
     <body>
         <div id="bar"><pear-ctrl></pear-ctrl></div>
         <div style="text-align: center">
-            <h1>hyperclip 🍐</h1>
+            <h1>Hyperclip 🍐</h1>
             <p id="key">Your hypercore key:</p>
             <button type="submit" id="sendClipboardButton">
                 Send Clipboard
