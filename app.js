@@ -8,14 +8,17 @@ function append(data) {
   core.append(data);
 }
 
+// Initialise hyperswarm 
 const swarm = new Hyperswarm();
+
 // Initialise hypercore in hyperclip-dir
 const core = new Hypercore("./hyperclip-dir", { writable: true });
-
 await core.ready();
-// Show connection key on the frontend
-document.getElementById("key").innerHTML =
-  "Your Hyperclip key is: " + b4a.toString(core.key, "hex");
+
+// Get the key and display it
+const key = b4a.toString(core.key, "hex");
+document.getElementById("key").textContent = `Your Hyperclip key is: ${key}`
+
 swarm.join(core.discoveryKey);
 swarm.on("connection", (conn) => core.replicate(conn));
 
